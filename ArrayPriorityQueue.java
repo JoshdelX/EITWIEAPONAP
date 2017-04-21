@@ -1,16 +1,11 @@
-//Team RubberDucks: Grace Cuenca, Despoina Sparakis
-//APCS2 pd1
-//HW32 -- Getting Past the Velvet Rope
-//2017-04-19
-
 import java.util.ArrayList;
 
-public class ArrayPriorityQueue implements PriorityQueue{
+public class ArrayPriorityQueue<T> implements PriorityQueue{
 
-    private ArrayList<Comparable> queue;
+    private ArrayList<Comparable <T>> queue;
 
     public ArrayPriorityQueue(){
-	queue = new ArrayList<Comparable>();
+	queue = new ArrayList<Comparable <T>>();
     }
 
     public void add (Comparable x){
@@ -55,7 +50,7 @@ public class ArrayPriorityQueue implements PriorityQueue{
     }
 
     public static void main (String[] args){
-	ArrayPriorityQueue bob = new ArrayPriorityQueue();
+	ArrayPriorityQueue<Integer> bob = new ArrayPriorityQueue<Integer>();
 	bob.add(6);
 	bob.add(7);
 	bob.add(9);
