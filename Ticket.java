@@ -1,15 +1,14 @@
 public class Ticket implements Comparable<Ticket> {
   
     private int ID;
-    public String desc;
+    public int problem;
     private int priority;
     private String username;
 
     //>>>>>>>>>>>>>> CONSTRUCTOR <<<<<<<<<<<<<<<
-    public Ticket(int theID, String theDesc, int thePrior, String theUser){
-	ID = theID;
-	desc = theDesc;
-	priority = thePrior;
+    public Ticket(int prob, String theUser){
+	ID = (int)(Math.random() * 10000);
+	problem = prob;
 	username = theUser;
     }
 
@@ -24,6 +23,10 @@ public class Ticket implements Comparable<Ticket> {
 
     public String getUsername() {
 	return username;
+    }
+
+    public int getProb(){
+	return problem;
     }
 
     //>>>>>>>>>>>>>>> MUTATORS <<<<<<<<<<<<<<<
@@ -48,6 +51,10 @@ public class Ticket implements Comparable<Ticket> {
 	    return 1;
 	}
 	return 0;
+    }
+
+    public void problemChange(int newP){
+	problem = newP;
     }
 
 }
